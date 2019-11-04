@@ -33,7 +33,7 @@ app.use(
         }
 
         type RootMutation {
-            createEvent(EventInput: EventInput): Event
+            createEvent(eventInput: EventInput): Event
         }
 
         schema {
@@ -53,7 +53,6 @@ app.use(
             price: +args.eventInput.price,
             date: args.eventInput.date
         }
-        console.log(args);
         events.push(event);
         return event
       }
